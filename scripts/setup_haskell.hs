@@ -131,7 +131,7 @@ setupHaskell = do
         unless stackYamlExists $ do
           -- Install ghc-mod via active stack resolver for maximum
           -- out-of-the-box compatibility.
-          stackInstall stackResolver "ghc-mod" False
+          stackInstall "lts-7.24" "ghc-mod" False
           -- Stack dependency solving requires cabal to be on the PATH.
           stackInstall "lts-7.24" "cabal-install" True
           -- Install hindent via pinned LTS to ensure we have version 5.
